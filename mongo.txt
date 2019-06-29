@@ -1,0 +1,4 @@
+usuario_admin
+wbIEFEM6V6vlwIDR
+
+mongodb+srv://usuario_admin:<password>@clusterapi-pj4ki.mongodb.net/test?retryWrites=true&w=majority
