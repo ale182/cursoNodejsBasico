@@ -1,9 +1,29 @@
 const express = require('express') ;
 const app = express();
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser') ;
 
-/* string conexao DB
-mongodb+srv://usuario_admin:<password>@clusterapi-pj4ki.mongodb.net/test?retryWrites=true&w=majority
-*/
+const url = 'mongodb+srv://usuario_admin:wbIEFEM6V6vlwIDR@clusterapi-pj4ki.mongodb.net/test?retryWrites=true&w=majority'
+const options = { reconnectTries : Number.MAX_VALUE, reconnectInterval: 500 , poolSize: 5 , useNewUrlParser: true } ;
+
+mongoose.connect(url,options) ;
+mongoose.set('useCreateIndex',true) ;
+
+mongoose.connection.on('error', (err) => {
+    console.log('Erro conexao DB: ' + err);
+})
+
+mongoose.connection.on('disconnected' , () => {
+  console.log('Desconectado DB');
+})
+
+mongoose.connection.on('connected' , () => {
+    console.log('Conectado DB');
+  })
+
+//BODY PARSER
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
 
 const indexRoute = require('./Routes/index');
 const usersRoute = require('./Routes/users');
