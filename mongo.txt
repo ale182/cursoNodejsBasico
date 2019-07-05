@@ -2,3 +2,23 @@ usuario_admin
 wbIEFEM6V6vlwIDR
 
 mongodb+srv://usuario_admin:<password>@clusterapi-pj4ki.mongodb.net/test?retryWrites=true&w=majority
+
+{
+  "email":"jwt1@teste.com",
+  "password":"123456"
+}
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkMWVjZWQ3MTMwZTlkMjljNGMyMTRiOCIsImlhdCI6MTU2MjMwMDExOSwiZXhwIjoxNTYyOTA0OTE5fQ.sksHLK0yi4MwR6ytnwpLGyi6dQSwbWGwS9U5BaS4llE"
+
+{
+  "email":"jwt2@teste.com",
+  "password":"123456"
+}
+{
+    "user": {
+        "_id": "5d1ed099a3d02c5884f843c5",
+        "email": "jwt2@teste.com",
+        "created": "2019-07-05T04:22:49.408Z",
+        "__v": 0
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkMWVkMDk5YTNkMDJjNTg4NGY4NDNjNSIsImlhdCI6MTU2MjMwMDU2OSwiZXhwIjoxNTYyOTA1MzY5fQ.ZTaTzjwGOMyBbBaIQFHMDFLyoBzNRo_aD8bU02KNk4k"
+}
